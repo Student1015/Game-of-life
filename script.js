@@ -8,3 +8,9 @@ function clickHandler(evt){
 
 var p = document.getElementById("pElement");
 p.addEventListener("click", clickHandler);
+
+function bodyClick(evt){
+    console.log("Clicked at X: " + evt.pageX + ", Y: " + evt.pageY);
+ }
+ window.onclick = bodyClick;
+ //This is the same as window.addEventListener("click", bodyClick);
