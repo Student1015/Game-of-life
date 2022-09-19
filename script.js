@@ -38,4 +38,4 @@ function main() {
 socket.on('Nachricht anzeigen', handleMessage);
 } // main closing bracket
 
-window.onload = main; 
+window.onload = main;  
