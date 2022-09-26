@@ -3,7 +3,9 @@ var side = 15;
 var size2 = 50;
 var emptyCells = [];
 var timer = 0;
+var ex_energy = 5;
 
+// Makes the code setup
 function setup(){
     createCanvas(size2*side,size2*side)
     background(50)
@@ -25,7 +27,7 @@ function setup(){
 
 
 function draw(){
-    frameRate(10)
+    frameRate(15)
     emptyCells=[];
     timer++
     for(var i=0;i<size2;i++){
@@ -51,9 +53,11 @@ function draw(){
         }
         timer = 0;
     }
+    ex_energy = document.getElementById("energy").value;
 }
 
 
+// Defines the position
 class Item{
     constructor(x,y){
         this.x = x;
@@ -82,12 +86,12 @@ class Grass extends Item {
                 if (matrix[y][x] instanceof Empty) {
                     found.push(this.directions[i]);
                 }
-            }  
+            }
         }
         var target = random(found);
         return target;
     }
-} 
+}
     
 
 class GrassEater  extends Item{
@@ -113,7 +117,7 @@ class GrassEater  extends Item{
             if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length){
                 if (matrix[y][x] instanceof Grass) {
                     foundGrassEater.push(this.directions[i]);
-                    this.energy = 15;
+                    this.energy = ex_energy;
                 }   
             }
         }
