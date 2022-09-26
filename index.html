@@ -5,5 +5,56 @@
       <script src="script.js"></script>
    </head>
    <body>
-   </body>
+      <label for="price">Choose energy level: </label>
+         <input
+         id="energy"
+         type="range"
+         name="energy"
+         id="energy"
+         min="0"
+         max="50"
+         step="1"
+         value="5" />
+         <style>
+            .button {
+              display: inline-block;
+              border-radius: 10px;
+              background-color: #f4511e;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 17px;
+              padding: 3px;
+              width: 170px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+            
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            
+            .button:hover span {
+              padding-right: 25px;
+            }
+            
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+            </style>
+            <button class="button" style="vertical-align:middle"><span>Summon red </span></button>
 </html>
