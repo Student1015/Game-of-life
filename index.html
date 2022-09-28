@@ -5,7 +5,7 @@
       <script src="script.js"></script>
    </head>
    <body>
-      <label for="price">Choose energy level: </label>
+      <label for="price">Choose energy GrassEater level: </label>
          <input
          id="energy"
          type="range"
@@ -28,14 +28,14 @@
               width: 170px;
               transition: all 0.5s;
               cursor: pointer;
-              margin: 5px;
+              margin: 0.3px;
             }
             
             .button span {
               cursor: pointer;
               display: inline-block;
               position: relative;
-              transition: 0.5s;
+              transition: 0.2s;
             }
             
             .button span:after {
@@ -56,5 +56,5 @@
               right: 0;
             }
             </style>
-            <button class="button" style="vertical-align:middle"><span>Summon red </span></button>
+            <button id="red" class="button" style="vertical-align:middle"><span id="red_text">Summon red </span></button>
 </html>
