@@ -61,8 +61,6 @@ function draw() {
     const element = document.getElementById("red");
     element.addEventListener("click", function () {
         matrix[25][25] = new Red(25, 25)
-        red_living = true
-
     });
 }
 
@@ -237,7 +235,7 @@ class Red extends Item {
     move() {
         var targetCell = this.chooseCells()
         //  console.log(targetCell)
-        if (targetCell == undefined){return}
+        if (targetCell == undefined) { return }
 
         var x = targetCell[0]
         var y = targetCell[1]
@@ -258,3 +256,21 @@ class Red extends Item {
 class Empty {
 
 }
+
+
+
+
+
+
+// function main() {
+//     function handleMessage(msg) {
+//         var p = document.createElement('p');
+//         p.innerText = msg;
+//         chatDiv.appendChild(p);
+//         input.value = "";
+//     }
+//     socket.on('display message', handleMessage);
+// }
+
+
+// window.onload = main;   

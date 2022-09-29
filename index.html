@@ -3,9 +3,10 @@
        <title>Geme-Of-Life</title>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
       <script src="script.js"></script>
+      <script src="././server/server.js"></script>
    </head>
    <body>
-      <label for="price">Choose energy GrassEater level: </label>
+      <label for="price">GrassEater energy level: </label>
          <input
          id="energy"
          type="range"
@@ -55,6 +56,52 @@
               opacity: 1;
               right: 0;
             }
-            </style>
-            <button id="red" class="button" style="vertical-align:middle"><span id="red_text">Summon red </span></button>
+          </style>
+          <style>
+            .server_button {
+              display: inline-block;
+              border-radius: 10px;
+              background-color: #3f58ea;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 17px;
+              padding: 3px;
+              width: 100px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 0.3px;
+            }
+            
+            .server_button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.2s;
+            }
+            
+            .server_button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: 20px;
+              transition: 0.5s;
+            }
+            
+            .server_button:hover span {
+              padding-right: 25px;
+            }
+            
+            .server_button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+
+            .server_button:hover {
+               background-color: rgb(35, 82, 222);
+              }
+          </style>
+          <button id="red" class="button" style="vertical-align:middle"><span id="red_text">Summon red </span></button>
+          <button id="server" class="server_button" style="vertical-align:middle"><span id="red_text">Upload </span></button>
 </html>

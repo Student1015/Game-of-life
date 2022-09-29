@@ -8,6 +8,10 @@ app.use(express.static("."));
 app.get('/', function (req, res) {
     res.redirect('log_data.html');
 });
+var data_btn = document.getElementById("server")
+data_btn.addEventListener("click", function () {
+    console.log("hello there")
+});
 io.on('connection', function (socket) {
     for(var i in messages) {
       io.sockets.emit("display message", messages[i]);
